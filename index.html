@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Laboratorio de Estructuras</title>
+        <!-- Metadata, Scripits y hojas de estilo -->
+        <meta http-equiv="Content - Type" content="text/html; charset=utf-8"/>
+        <script type ="text/javascript" src= "Js/jquery-3.2.1.js"></script>
+
+    </head>
+    <body>
+        Llave<br>
+       <input type="text" id="txtLLave" value=""><br>
+       Valor <br>
+       <input type="text" id="txtValor" value=""><br> 
+       
+       <textarea id="txtXML" cols="35" rows="40"></textarea>
+       <textarea id="txtJson" cols="35" rows="40"></textarea>
+
+       <button onclick="agregar()">Agregar </button>
+    </body>
+</html>
+
+<script type="text/javascript">
+    var lista = new Array();
+
+    function agregar(){
+        $("#txtJson").val(JSON.stringify);
+
+        for(var i=0; i<lista.length; i++)
+        {
+            if(lista[i].llave === $("#txtLLave").val()){
+                alert("Llave repetida");
+                var bandera = true;
+                return;
+            }
+        }
+        if (!bandera) 
+        {
+            lista.push({ llave:$("#txtLLave").val(), valor: $("#txtValor").val()});
+            $("#txtJson").val(JSON.stringify(lista));
+            //$("#txtXML").val("sehajsd");
+
+            agregarXML();
+
+        }
+
+        //Limpiar Variables
+        bandera = false;
+        
+        $("#txtLLave").val("");
+        $("#txtValor").val("");
+    }
+
+    function agregarXML(){
+
+        var textFinalXM='<?xml version="1.0" encoding="UTF-8"?>\n';
+        textFinalXM+="<root>\n";
+        for (var i = 0; i < lista.length; i++) 
+        {
+            textFinalXM+="  <element>\n"
+            textFinalXM+="      <llave>"+lista[i].llave+"</llave>\n";
+            textFinalXM+="      <valor>"+lista[i].valor+"</valor>\n";
+            textFinalXM+="  </element>\n"
+        }
+        textFinalXM+="</root>\n";
+
+        $("#txtXML").val(textFinalXM);
+    }
+
+</script>
+
