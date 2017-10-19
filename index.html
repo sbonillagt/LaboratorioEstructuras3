@@ -7,15 +7,40 @@
 
     </head>
     <body>
-        Llave<br>
-       <input type="text" id="txtLLave" value=""><br>
-       Valor <br>
-       <input type="text" id="txtValor" value=""><br> 
-       
-       <textarea id="txtXML" cols="35" rows="40"></textarea>
-       <textarea id="txtJson" cols="35" rows="40"></textarea>
+        <style type="text/css">
+            #submit {
+              background-color: darkblue;
+              padding: .5em;
+              -moz-border-radius: 2px;
+              -webkit-border-radius: 2px;
+              border-radius: 3px;
+              color: white;
+              font-family: 'calibri';
+              font-size: 13px;
+              text-decoration: none;
+              border: none;
+            }
+            
+            #submit:hover {
+              border: none;
+              background: orange;
+              box-shadow: 0px 0px 1px #777;
+            }
+        </style>
 
-       <button onclick="agregar()">Agregar </button>
+    <font size="6" face="calibri"><b><center><i>Laboratorio #3 EDII</i></center></b></font>
+    
+        <center><br>
+            <input type="text" id="txtLLave" placeholder="Llave">
+            <input type="text" id="txtValor" placeholder="Valor">
+            <button id="submit" onclick="agregar()">Agregar</button><br><br>
+            <!--<button onclick="agregar()">Agregar</button><br><br>-->
+            <textarea name="" id="txtXML" cols="30" rows="30"></textarea>
+            <textarea name="" id="txtJson" cols="30" rows="30"></textarea>        
+        </center>
+    
+    <font size="2" face="calibri"><b><center><i>Sebastian Bonilla   #2001516</i></center></b></font>
+    <font size="2" face="calibri"><b><center><i>Harry Caballeros    #1079316</i></center></b></font>
     </body> 
 </html>
 
