@@ -16,7 +16,7 @@
        <textarea id="txtJson" cols="35" rows="40"></textarea>
 
        <button onclick="agregar()">Agregar </button>
-    </body>
+    </body> 
 </html>
 
 <script type="text/javascript">
@@ -37,8 +37,6 @@
         {
             lista.push({ llave:$("#txtLLave").val(), valor: $("#txtValor").val()});
             $("#txtJson").val(JSON.stringify(lista));
-            //$("#txtXML").val("sehajsd");
-
             agregarXML();
 
         }
